@@ -1,0 +1,9 @@
+digraph G {
+  rankdir = "RL";
+  node [shape = rect, fontname = "sans-serif"];
+  "aws_eip.eip" [label="aws_eip.eip"];
+  "aws_instance.vm" [label="aws_instance.vm"];
+  "aws_security_group.sg" [label="aws_security_group.sg"];
+  "aws_eip.eip" -> "aws_instance.vm";
+  "aws_security_group.sg" -> "aws_eip.eip";
+}
